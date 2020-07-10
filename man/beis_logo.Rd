@@ -2,8 +2,7 @@
 % Please edit documentation in R/beis_logo.R
 \name{beis_logo}
 \alias{beis_logo}
-\title{Copy BEIS logo to working directory
-Copies the standard or white typeface version of the BEIS logo to your current working directory}
+\title{Copy BEIS logo to working directory.}
 \usage{
 beis_logo(copy_to = getwd(), white_type = FALSE)
 }
@@ -16,9 +15,8 @@ beis_logo(copy_to = getwd(), white_type = FALSE)
 Returns a copy of the png image to the directory
 }
 \description{
-Copy BEIS logo to working directory
-Copies the standard or white typeface version of the BEIS logo to your current working directory
+Copies the standard or white typeface version of the BEIS logo to your current working directory.
 }
 \examples{
-beis_logo(copy_to = "/my_folder", white_type = FALSE)
+beis_logo(copy_to = "my_folder", white_type = FALSE)
 }
