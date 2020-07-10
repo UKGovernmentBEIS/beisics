@@ -1,0 +1,13 @@
+Package: beisics
+Title: A package to apply BEIS styling to visualisations, apps and markdown
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Amy",
+           family = "Andrews",
+           role = c("aut", "cre"),
+           email = "datascience@beis.gov.uk",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: What the package does (one paragraph).
+License: MIT
+Encoding: UTF-8
+LazyData: true
