@@ -1,0 +1,75 @@
+
+  /* Basic BEIS-style css */
+
+/* BEIS colours
+Dark blue = #00447c
+Bright blue = #00b7ee
+Grey = #a8b8be
+Magenta (pink) = #ee3d8f
+Green = #9ccd63
+Turquoise = #62c6c2
+Gold = #fbb034
+Platinum = # c2baa9
+
+Red (not a BEIS colour) = #ec3337
+Table blue (not a BEIS colour) = #C5E8FF;
+Darker red (not a BEIS colour) = #9a0e11
+Darker green (not a BEIS colour) = #5b842b
+Light grey (not a BEIS colour) = #E0E6E8
+White = #FFFFFF
+Black = #000000
+*/
+
+
+body {
+  margin: 1% 2.5% 1% 2.5%;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  color: white;
+  background: #00447c;
+  padding: 1.5% 3% 1.5% 3%;
+}
+
+h2 {
+  color: #00447c;
+  border-bottom: 3px solid  #00447c;
+  padding: 1% 1% 0.5% 1%;
+}
+
+h3 {
+  color: #505050;
+  font-size: 22px;
+  border-bottom: 2px solid  #a8b8be;
+  padding: 1% 1% 0.5% 1%;
+}
+
+h4 {
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#plot-container {
+	position: relative;
+}
+
+#loading-spinner {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: -1;
+	margin-top: -33px; /* half of the spinner's height */
+	margin-left: -33px; /* half of the spinner's width */
+}
+
+#plot.recalculating {
+	z-index: -2;
+}
+
+ /* add in elements for a table, borders, bullet lists, 
+ numbered lists, table captions, table positions, plot positions, 
+ plot captions, inline code, code blocks, section list elements, block quotes, lines for line break,
+ header with beis logo in it, footer with beis logo in it*/

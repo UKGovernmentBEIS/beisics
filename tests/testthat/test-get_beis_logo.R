@@ -1,8 +1,9 @@
-context("testing beis_logo")
-testthat::test_that("test expected behaviour for beis_logo function", {
+context("testing get_beis_logo")
+testthat::test_that("test expected behaviour for get_beis_logo function", {
+
   copy_to <- "P:/"
   white_type <- TRUE
-  output <- beis_logo(copy_to = copy_to, white_type = white_type)
+  output <- get_beis_logo(copy_to = copy_to, white_type = white_type)
 
   testthat::expect_is(copy_to, "character")
   testthat::expect_is(white_type, "logical")

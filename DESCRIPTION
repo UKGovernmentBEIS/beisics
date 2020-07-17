@@ -7,11 +7,13 @@ Authors@R:
            role = c("aut", "cre"),
            email = "datascience@beis.gov.uk",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Package imports functions to help style visusalisations with BEIS styling, including the BEIS logo.
+Description: Package imports functions to help style visualisations with BEIS styling, including the BEIS logo.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.0.0
 Imports: 
     assertthat,
-    testthat
+    ggplot2
+Suggests: 
+    testthat (>= 2.1.0)

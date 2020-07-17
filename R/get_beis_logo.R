@@ -8,11 +8,11 @@
 #' @return Returns a copy of the png image to the directory
 #' @export
 #'
-#' @examples beis_logo(copy_to = "my_folder", white_type = FALSE)
+#' @examples get_beis_logo(copy_to = "my_folder", white_type = FALSE)
 
 
 
-beis_logo <- function(copy_to = getwd(), white_type = FALSE){
+get_beis_logo <- function(copy_to = getwd(), white_type = FALSE){
 
   assertthat::assert_that(is.character(copy_to))
   assertthat::assert_that(is.logical(white_type))
