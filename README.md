@@ -15,15 +15,14 @@ To download and install the package from the gitlab repository:
 - browse to the location of the beisml…tar.gz
 - Then click Install
 
-Alternatively the package can be installed from RStudio using the `devtools`, `git2r` and `getPass` packages with the following code:
+A potential alternative in the future will be to install the package using the `devtools`, `git2r` and `getPass` packages with the following code:
 ```
 devtools::install_git(
     "http://cbas-pdcm-01/all_data_science/beisics",
     credentials = git2r::cred_user_pass("your_username", getPass::getPass())
 )
 ```
-
-Enter your CBAS password when prompted.
+Entering your CBAS password when prompted.
  
 ## Background 
 
