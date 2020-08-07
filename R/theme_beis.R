@@ -21,7 +21,7 @@ theme_beis <- function(){
     axis.title.y = ggplot2::element_text(margin = ggplot2::margin(0, 30, 0, 0,"pt")),
     panel.background = ggplot2::element_rect(fill = "white", color = "white"),
     panel.grid.major.x = ggplot2::element_line(colour = "grey"),
-    axis.line.x.bottom = ggplot2::element_line(colour = "grey"),
+    axis.line.x.bottom = ggplot2::element_line(colour = "white"),
     axis.line.y.left = ggplot2::element_line(colour = "grey")
   )
 
