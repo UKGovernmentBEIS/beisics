@@ -16,7 +16,8 @@ To download and install the package from the gitlab repository:
 - Then click Install
 
 Alternatively the package can be installed from RStudio using the `devtools`, `git2r` and `getPass` packages with the following code:
-```devtools::install_git(
+```
+devtools::install_git(
     "http://cbas-pdcm-01/all_data_science/beisics",
     credentials = git2r::cred_user_pass("your_username", getPass::getPass())
 )
@@ -57,7 +58,7 @@ The current functions in the package are:
 - a function for styling excel workbooks/csvs saved from R
 
 ## Resources
-https://engineering-shiny.org/css.html
-https://slides.earo.me/rladies-pkg/#5
-Mango package building course
-R package `Govdown`, created by GDS and installed in CBAS
+- https://engineering-shiny.org/css.html
+- https://slides.earo.me/rladies-pkg/#5
+- Mango package building course
+- R package `Govdown`, created by GDS and installed in CBAS
