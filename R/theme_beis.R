@@ -2,6 +2,8 @@
 #'
 #' Uses the ggplot2::theme() function to create a BEIS style for ggplots.
 #'
+#' @param ... Any additional arguments to pass to ggtheme
+#'
 #' @return Returns a styled ggplot when used as the theme
 #' @export
 #'
@@ -9,9 +11,13 @@
 #' ggplot2::geom_point(ggplot2::aes(x = wt, y = mpg, colour = gear)) +
 #' theme_beis()
 
-theme_beis <- function(){
+theme_beis <- function(...){
 
-  ggplot2::theme(
+  # to be updated to include
+  # whether the plot is horizontal or vertical
+  # so lines correspond
+
+  ggtheme <-  ggplot2::theme(
     #base_size = 11,
     #base_family = "",
     #base_line_size = base_size/22,
@@ -20,9 +26,17 @@ theme_beis <- function(){
     axis.title = ggplot2::element_text(face = "bold"),
     axis.title.y = ggplot2::element_text(margin = ggplot2::margin(0, 30, 0, 0,"pt")),
     panel.background = ggplot2::element_rect(fill = "white", color = "white"),
-    panel.grid.major.x = ggplot2::element_line(colour = "grey"),
-    axis.line.x.bottom = ggplot2::element_line(colour = "white"),
-    axis.line.y.left = ggplot2::element_line(colour = "grey")
+    panel.grid.major.y = ggplot2::element_line(colour = "grey"),
+    axis.line.x.bottom = ggplot2::element_line(colour = "grey"),
+    axis.line.y.left = ggplot2::element_line(colour = "white"),
+    legend.position = "none"
   )
 
+  scale_lims_y <- ggplot2::scale_y_continuous(expand = c(0,0), limits = c(0,NA))
+
+  labs <- ggplot2::labs(x = NULL, y = NULL)
+
+  return(list(ggtheme, labs, scale_lims_y))
+
 }
+

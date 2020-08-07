@@ -1,6 +1,28 @@
 # Package `beisics`
 
-This package is intended to allow consistent 'BEIS-like' styling in R dashboards, visualisations and markdown documents.
+This package is intended to allow consistent 'BEIS-like' styling in R dashboards, visualisations and markdown documents. This package was designed to create each function as a minimum viable product, which can be added to and updated continously. 
+
+## Downloading and using
+
+Similar to other packages which have been written for R within CBAS, this package can be downloaded, installed and tested from the internal instance of the CBAS gitlab, under `all_data_science/beisics`
+
+To download and install the package from the gitlab repository:
+
+- Click on the beisml…tar.gz in the respository
+- Download into a folder accessible from R
+- In RStudio click on Tools -> Install Packages…
+- Install from Package Archive file
+- browse to the location of the beisml…tar.gz
+- Then click Install
+
+Alternatively the package can be installed from RStudio using the `devtools`, `git2r` and `getPass` packages with the following code:
+```devtools::install_git(
+    "http://cbas-pdcm-01/all_data_science/beisics",
+    credentials = git2r::cred_user_pass("your_username", getPass::getPass())
+)
+```
+
+Enter your CBAS password when prompted.
  
 ## Background 
 
@@ -19,11 +41,16 @@ The current functions in the package are:
 - `get_beis_css()` - copies BEIS-like css file to directory
 - `get_beis_logo()` - copies BEIS logo to directory, with optional white typeface
 - `get_beisics()` - copies both the BEIS-like css file and the BEIS logo to directory
+- `theme_beis_dygraph()` - uses `beis_css()` and `beis_colours()` to style dygraph objects
  
+## Ongoing expansions
+
+- Additional functionality for the ggplot function `theme_beis()` to include colour styling
+- Additional functionality for `get_beisics()` to set defaults for ggplots, plotly and dygraph
+
 ## Ideal future functions
  
 - a function for BEIS-like plotly theme
-- a function for BEIS-like dygraph theme
 - a function for BEIS-like leaflet theme
 - an example template/ markdown layout 
 - BEIS-like Shiny elements, e.g. css spinner

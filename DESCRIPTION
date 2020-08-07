@@ -14,6 +14,8 @@ LazyData: true
 RoxygenNote: 7.0.0
 Imports: 
     assertthat,
-    ggplot2
+    ggplot2,
+    magrittr,
+    dygraphs
 Suggests: 
     testthat (>= 2.1.0)

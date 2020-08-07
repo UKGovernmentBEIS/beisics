@@ -75,18 +75,3 @@ h4 {
  numbered lists, table captions, table positions, plot positions,
  plot captions, inline code, code blocks, section list elements, block quotes, lines for line break,
  header with beis logo in it, footer with beis logo in it*/
-
- /* Elements for dygraph */
-
- .dygraph-title {
-  color: #000000;
-  font-size: 18px;
-  font-weight: bold;
-  align-content: flex-start;
-  font-family: sans-serif;
- }
-
- .dygraph-axis-label {
-   font-size: 11px;
-   font-family: sans-serif;
- }

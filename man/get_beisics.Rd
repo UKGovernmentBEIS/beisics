@@ -16,7 +16,7 @@ Returns a copy of the png image to the directory
 }
 \description{
 Copies the standard or white typeface version of the BEIS logo to your current working directory.
-Also copies BEIS-styling css stylesheet to specified directory.
+Also copies BEIS-styling css stylesheet to specified directory. Also updates ggplot default colouring.
 }
 \examples{
 get_beis_logo(copy_to = "my_folder", white_type = FALSE)

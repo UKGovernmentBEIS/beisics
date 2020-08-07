@@ -17,7 +17,7 @@ beis_css <- function(copy_to = getwd()){
 
   get_beis_css(copy_to = copy_to)
 
-  css_path <- paste0(copy_to, "beis_css.css")
+  css_path <- paste0(copy_to, "/beis_css.css")
 
   return(css_path)
 
