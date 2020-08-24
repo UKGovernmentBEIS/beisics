@@ -12,7 +12,7 @@ To download and install the package from the gitlab repository:
 - Download into a folder accessible from R
 - In RStudio click on Tools -> Install Packages…
 - Install from Package Archive file
-- browse to the location of the beisml…tar.gz
+- browse to the location of the beisics…tar.gz
 - Then click Install
 
 A potential alternative in the future will be to install the package using the `devtools`, `git2r` and `getPass` packages with the following code:
