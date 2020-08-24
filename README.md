@@ -8,7 +8,7 @@ Similar to other packages which have been written for R within CBAS, this packag
 
 To download and install the package from the gitlab repository:
 
-- Click on the beisml…tar.gz in the respository
+- Click on the beisics…tar.gz in the respository
 - Download into a folder accessible from R
 - In RStudio click on Tools -> Install Packages…
 - Install from Package Archive file
