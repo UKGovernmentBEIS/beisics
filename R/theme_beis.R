@@ -29,7 +29,8 @@ theme_beis <- function(...){
     panel.grid.major.y = ggplot2::element_line(colour = "grey"),
     axis.line.x.bottom = ggplot2::element_line(colour = "grey"),
     axis.line.y.left = ggplot2::element_line(colour = "white"),
-    legend.position = "none"
+    legend.position = "bottom",
+    legend.title = ggplot2::element_blank()
   )
 
   scale_lims_y <- ggplot2::scale_y_continuous(expand = c(0,0), limits = c(0,NA))

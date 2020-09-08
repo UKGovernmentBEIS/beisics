@@ -4,10 +4,12 @@
 \alias{theme_beis_dygraph}
 \title{Style a dygraph with a BEIS theme.}
 \usage{
-theme_beis_dygraph(dygraph, ...)
+theme_beis_dygraph(dygraph, copy_to = getwd())
 }
 \arguments{
 \item{dygraph}{The dygraph object}
+
+\item{copy_to}{The working directory to copy the logo to, default current working directory}
 
 \item{...}{Any additional arguments to pass to dygraph or beis_css or beis_colours()}
 }
@@ -18,6 +20,6 @@ Returns a styled dygraph when piped to
 Uses the dygraphs package and calls beis_css() and beis_colours() to style
 }
 \examples{
-dygraphs::dygraph(cbind(mdeaths, fdeaths), main = "title") \%>\%
-theme_beis_dygraph()
+d <- dygraphs::dygraph(cbind(mdeaths, fdeaths), main = "title")
+p <- theme_beis_dygraph(d, copy_to = "P:/")
 }

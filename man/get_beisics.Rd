@@ -19,5 +19,5 @@ Copies the standard or white typeface version of the BEIS logo to your current w
 Also copies BEIS-styling css stylesheet to specified directory. Also updates ggplot default colouring.
 }
 \examples{
-get_beis_logo(copy_to = "my_folder", white_type = FALSE)
+get_beisics(copy_to = "my_folder", white_type = FALSE)
 }

@@ -52,7 +52,7 @@ beis_colours <- function(n = 15, distinct = FALSE){
     }
 
     colours <- c("#003366", "#0099cc", "#c2baa9",
-                 "#ec3337", "#FFFFFF", "#000000")
+                 "#5b842b", "#ee3d8f", "#505050")
 
   }
 

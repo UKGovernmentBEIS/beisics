@@ -9,7 +9,7 @@
 #' @return Returns a copy of the png image to the directory
 #' @export
 #'
-#' @examples get_beis_logo(copy_to = "my_folder", white_type = FALSE)
+#' @examples get_beisics(copy_to = "my_folder", white_type = FALSE)
 
 
 

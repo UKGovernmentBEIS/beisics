@@ -4,18 +4,22 @@
 #'
 #' @param dygraph The dygraph object
 #' @param ... Any additional arguments to pass to dygraph or beis_css or beis_colours()
+#' @param copy_to The working directory to copy the logo to, default current working directory
 #'
 #' @return Returns a styled dygraph when piped to
 #' @export
-#' @importFrom magrittr %>%
+#' @examples d <- dygraphs::dygraph(cbind(mdeaths, fdeaths), main = "title")
+#' p <- theme_beis_dygraph(d, copy_to = "P:/")
 #'
-#' @examples dygraphs::dygraph(cbind(mdeaths, fdeaths), main = "title") %>%
-#' theme_beis_dygraph()
+#' @seealso beis_css, beis_colours
 
-theme_beis_dygraph <- function(dygraph, ...){
+theme_beis_dygraph <- function(dygraph, copy_to = getwd()){
 
-  dygraphs::dyAxis(dygraph, "y", drawGrid = FALSE) %>%
-    dygraphs::dyCSS(beis_css()) %>%
-    dygraphs::dyOptions(colors = beis_colours())
+  p <- dygraphs::dyAxis(dygraph, "y", drawGrid = FALSE)
+
+  p <- dygraphs::dyCSS(p, beis_css(copy_to))
+
+  p <- dygraphs::dyOptions(p, colors = beis_colours())
+
 
 }
