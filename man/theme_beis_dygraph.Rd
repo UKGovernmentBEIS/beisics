@@ -22,4 +22,8 @@ Uses the dygraphs package and calls beis_css() and beis_colours() to style
 \examples{
 d <- dygraphs::dygraph(cbind(mdeaths, fdeaths), main = "title")
 p <- theme_beis_dygraph(d, copy_to = "P:/")
+
+}
+\seealso{
+beis_css, beis_colours
 }
