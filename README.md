@@ -2,6 +2,12 @@
 
 This package is intended to allow consistent 'BEIS-like' styling in R dashboards, visualisations and markdown documents. This package was designed to create each function as a minimum viable product, which can be added to and updated continously. 
 
+## Background 
+
+Having a consistent styling framework available to all analysts in BEIS will make work produced within BEIS recognisable and clear, whilst ideally adhering to UX and usability standards. It could also help to implement work already undertaken by the CAGG team to create consistent styling in plots in excel for internal use. Therefore there is already grounds for engagement with this package, which increases the chance that others will contribute to it in future, and hopefully also translate it to other programming languages. R Studio report that:
+ 
+> "Interestingly, one powerful way to increase the adoption of data science outputs [...] is to stick to consistent branding. Having a common look and feel makes it easier for management to recognize the work of the data science team, especially as the team grows. Consistent branding also saves the R user time that would normally be spent picking fonts and color schemes."
+
 ## Downloading and using
 
 Similar to other packages which have been written for R within CBAS, this package can be downloaded, installed and tested from the internal instance of the CBAS gitlab, under `all_data_science/beisics`
@@ -24,11 +30,9 @@ devtools::install_git(
 ```
 Entering your CBAS password when prompted.
  
-## Background 
+## Adding to the package
 
-Having a consistent styling framework available to all analysts in BEIS will make work produced within BEIS recognisable and clear, whilst ideally adhering to UX and usability standards. It could also help to implement work already undertaken by the CAGG team to create consistent styling in plots in excel for internal use. Therefore there is already grounds for engagement with this package, which increases the chance that others will contribute to it in future, and hopefully also translate it to other programming languages. R Studio report that:
- 
-> "Interestingly, one powerful way to increase the adoption of data science outputs [...] is to stick to consistent branding. Having a common look and feel makes it easier for management to recognize the work of the data science team, especially as the team grows. Consistent branding also saves the R user time that would normally be spent picking fonts and color schemes."
+The ideal state of this package is for it to be owned and evolved by BEIS analysts within the department. If there is a function which could be added or improved in the package, please do contribute to the package by first cloning and branching from the master GitLab repo, building or refactoring code, re-building the package to get the gz file, add this back into the repo, and setting up a merge request through GitLab. Ideally someone else will be available to check through the merge request before adding it to the master version. 
 
 ## Existing functions
 
@@ -53,7 +57,7 @@ The current functions in the package are:
 - a function for BEIS-like plotly theme
 - a function for BEIS-like leaflet theme
 - an example template/ markdown layout 
-- BEIS-like Shiny elements, e.g. css spinner
+- BEIS-like Shiny elements 
 - a function for styling excel workbooks/csvs saved from R
 
 ## Resources
