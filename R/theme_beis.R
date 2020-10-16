@@ -30,14 +30,19 @@ theme_beis <- function(...){
     axis.line.x.bottom = ggplot2::element_line(colour = "grey"),
     axis.line.y.left = ggplot2::element_line(colour = "white"),
     legend.position = "bottom",
-    legend.title = ggplot2::element_blank()
+    legend.title = ggplot2::element_blank(),
+    plot.title = element_text(hjust = 0, size = rel(1.5), face = "bold", colour = "#505050"),
+    plot.subtitle = element_text(hjust = 0)
   )
 
-  scale_lims_y <- ggplot2::scale_y_continuous(expand = c(0,0), limits = c(0,NA))
+
+  color_manual <- scale_color_manual(values = beis_colours())
+
+  fill_manual <- scale_fill_manual(values = beis_colours())
 
   labs <- ggplot2::labs(x = NULL, y = NULL)
 
-  return(list(ggtheme, labs, scale_lims_y))
+  return(list(ggtheme, labs, color_manual, fill_manual))
 
 }
 
