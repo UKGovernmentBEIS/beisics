@@ -17,6 +17,6 @@ Uses the ggplot2::theme() function to create a BEIS style for ggplots.
 }
 \examples{
 ggplot2::ggplot(mtcars) +
-ggplot2::geom_point(ggplot2::aes(x = wt, y = mpg, colour = gear)) +
+ggplot2::geom_point(ggplot2::aes(x = wt, y = mpg, colour = as.factor(gear))) +
 theme_beis()
 }

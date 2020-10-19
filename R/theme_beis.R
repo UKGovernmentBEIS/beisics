@@ -7,8 +7,10 @@
 #' @return Returns a styled ggplot when used as the theme
 #' @export
 #'
+#' @import ggplot2
+#'
 #' @examples ggplot2::ggplot(mtcars) +
-#' ggplot2::geom_point(ggplot2::aes(x = wt, y = mpg, colour = gear)) +
+#' ggplot2::geom_point(ggplot2::aes(x = wt, y = mpg, colour = as.factor(gear))) +
 #' theme_beis()
 
 theme_beis <- function(...){
@@ -17,7 +19,7 @@ theme_beis <- function(...){
   # whether the plot is horizontal or vertical
   # so lines correspond
 
-  ggtheme <-  ggplot2::theme(
+  ggtheme <-  theme(
     #base_size = 11,
     #base_family = "",
     #base_line_size = base_size/22,

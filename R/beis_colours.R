@@ -36,13 +36,15 @@
 #'
 #' @export
 #'
+#' @importFrom assertthat assert_that
+#'
 #' @examples beis_colours(n = 3, distinct = TRUE)
 
 
 beis_colours <- function(n = 15, distinct = FALSE){
 
-  assertthat::assert_that(is.numeric(n))
-  assertthat::assert_that(is.logical(distinct))
+  assert_that(is.numeric(n))
+  assert_that(is.logical(distinct))
 
   if (distinct == FALSE){
 

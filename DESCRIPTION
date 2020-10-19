@@ -1,6 +1,6 @@
 Package: beisics
 Title: A package to apply BEIS styling to visualisations, apps and markdown
-Version: 0.0.0.9000
+Version: 0.0.1.1
 Authors@R: 
     person(given = "Amy",
            family = "Andrews",
