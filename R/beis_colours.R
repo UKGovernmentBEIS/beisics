@@ -4,30 +4,42 @@
 #'
 #' @param n The number of colours to return, max is 15 for non-distinct, 5 for distinct.
 #' @param distinct Whether to return only colours which are more easily distinguishable or all colours
+#' @param deafult Choose whether to use the default BEIS colour scheme or the alternative (unofficial)
 #'
 #' @return Returns a character vector of the hex codes for BEIS colours
 #'
-#' BEIS colours:
+#' BEIS colours primary (as of October 2020):
 #' Dark blue = #003366
-#' Bright blue = #0099cc
-#' Grey = #a8b8be
-#' cobalt blue = #0047ab
-#' cyan = #689d9c
-#' Magenta (pink) = #ee3d8f - NOT USED
-#' Green = #9ccd63  - Not USED
-#' Dark moss green = #4a5d23
-#' Teal = #006666
-#' Platinum = #c2baa9 - Noy used
-#' Medium dark blue = #3d4556
+#' Cyan = #0099cc
+#'
+#' BEIS colours secondary
+#' Secondary colours
+#'	Lime (#99cc00)
+#'	Green (#66cc33)
+#'	Gold (#ffcc33)
+#'	Orange (#ff9933)
+#'	Magenta (#ff3399)
+#'  Cerise (#cc0099)
+#'	Purple (#663399)
+#'	Lilac (#996699)
+#' 	Marine grey (#b3bfc5)
+#'	Dark slate (#555559)
+#'
+#' Alternate secondary colours
+#'  Grey = #a8b8be
+#'  cobalt blue = #0047ab
+#'  cyan = #689d9c
+#'  Dark moss green = #4a5d23
+#'  Teal = #006666
+#'  Medium dark blue = #3d4556
 #'
 #' Non-BEIS colours also included:
-#' Light blue = #c5e8ff - Not used
+#' Light blue = #c5e8ff -
 #' Root beer = #290e05
 #' Pistachio green = #93c572
 #' Darker grey = #505050
 #' Red = #ec3337
 #' Darker red = #9a0e11
-#' Gold = #fbb034
 #' White = #FFFFFF - Not Used
 #' Black = #000000
 #'
@@ -41,16 +53,22 @@
 #' @examples beis_colours(n = 3, distinct = TRUE)
 
 
-beis_colours <- function(n = 15, distinct = FALSE){
+beis_colours <- function(n = 15, distinct = FALSE, default = TRUE){
 
   assert_that(is.numeric(n))
   assert_that(is.logical(distinct))
 
   if (distinct == FALSE){
+    if(default == TRUE) {
+      colours <- c("#003366", "#0099cc", "#99cc00", "#66cc33", "#ffcc33", "#ff9933", "#ff3399",
+                   "#cc0099", "#663399", "#996699", "#ec3337", "#9a0e11", "#555559", "#b3bfc5",
+                   "#000000")
+
+    } else {
 
     colours <- c("#003366", "#0099cc", "#a8b8be", "#0047ab", "#689d9c", "#4a5d23", "#006666", "#3d4556",
                  "#290e05", "#93c572", "#505050", "#ec3337", "#9a0e11", "#fbb034", "#000000")
-  } else {
+  }} else {
 
     if (n > 6){
 

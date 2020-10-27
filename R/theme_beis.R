@@ -2,6 +2,7 @@
 #'
 #' Uses the ggplot2::theme() function to create a BEIS style for ggplots.
 #'
+#' @param default_colours whether to use the default colour scheme for BEIS or the alternative
 #' @param ... Any additional arguments to pass to ggtheme
 #'
 #' @return Returns a styled ggplot when used as the theme
@@ -13,7 +14,7 @@
 #' ggplot2::geom_point(ggplot2::aes(x = wt, y = mpg, colour = as.factor(gear))) +
 #' theme_beis()
 
-theme_beis <- function(...){
+theme_beis <- function(default_colours = TRUE, ...){
 
   # to be updated to include
   # whether the plot is horizontal or vertical
@@ -38,9 +39,9 @@ theme_beis <- function(...){
   )
 
 
-  color_manual <- scale_color_manual(values = beis_colours())
+  color_manual <- scale_color_manual(values = beis_colours(default = default_colours))
 
-  fill_manual <- scale_fill_manual(values = beis_colours())
+  fill_manual <- scale_fill_manual(values = beis_colours(default = default_colours))
 
   labs <- ggplot2::labs(x = NULL, y = NULL)
 
