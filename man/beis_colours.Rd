@@ -4,37 +4,50 @@
 \alias{beis_colours}
 \title{Get BEIS colour palette.}
 \usage{
-beis_colours(n = 15, distinct = FALSE)
+beis_colours(n = 15, distinct = FALSE, default = TRUE)
 }
 \arguments{
 \item{n}{The number of colours to return, max is 15 for non-distinct, 5 for distinct.}
 
 \item{distinct}{Whether to return only colours which are more easily distinguishable or all colours}
+
+\item{deafult}{Choose whether to use the default BEIS colour scheme or the alternative (unofficial)}
 }
 \value{
 Returns a character vector of the hex codes for BEIS colours
 
-BEIS colours:
+BEIS colours primary (as of October 2020):
 Dark blue = #003366
-Bright blue = #0099cc
-Grey = #a8b8be
-cobalt blue = #0047ab
-cyan = #689d9c
-Magenta (pink) = #ee3d8f - NOT USED
-Green = #9ccd63  - Not USED
-Dark moss green = #4a5d23
-Teal = #006666
-Platinum = #c2baa9 - Noy used
-Medium dark blue = #3d4556
+Cyan = #0099cc
 
-Non-BEIS colours also included:
-Light blue = #c5e8ff - Not used
-Root beer = #290e05
+BEIS colours secondary
+Secondary colours
+Lime (#99cc00)
+Green (#66cc33)
+Gold (#ffcc33)
+Orange (#ff9933)
+Magenta (#ff3399)
+ Cerise (#cc0099)
+Purple (#663399)
+Lilac (#996699)
+	Marine grey (#b3bfc5)
+Dark slate (#555559)
+
+Alternate secondary colours
+ Grey = #a8b8be
+ cobalt blue = #0047ab
+ cyan = #689d9c
+ Dark moss green = #4a5d23
+ Teal = #006666
+ Medium dark blue = #3d4556
+
+Non-BEIS colours also used:
+Light blue = #c5e8ff -
+Root beer = #4c1a09
 Pistachio green = #93c572
 Darker grey = #505050
 Red = #ec3337
 Darker red = #9a0e11
-Gold = #fbb034
 White = #FFFFFF - Not Used
 Black = #000000
 

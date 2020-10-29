@@ -3,6 +3,7 @@
 #' Uses the ggplot2::theme() function to create a BEIS style for ggplots.
 #'
 #' @param default_colours whether to use the default colour scheme for BEIS or the alternative
+#' @param distinc_colours Whether to use Dsitinct colours - maximum of 5
 #' @param ... Any additional arguments to pass to ggtheme
 #'
 #' @return Returns a styled ggplot when used as the theme
@@ -14,7 +15,7 @@
 #' ggplot2::geom_point(ggplot2::aes(x = wt, y = mpg, colour = as.factor(gear))) +
 #' theme_beis()
 
-theme_beis <- function(default_colours = TRUE, ...){
+theme_beis <- function(default_colours = TRUE, distinct_colours = FALSE, ...){
 
   # to be updated to include
   # whether the plot is horizontal or vertical
@@ -39,9 +40,11 @@ theme_beis <- function(default_colours = TRUE, ...){
   )
 
 
-  color_manual <- scale_color_manual(values = beis_colours(default = default_colours))
+  color_manual <- scale_color_manual(values = beis_colours(default = default_colours,
+                                                           distinct = distinct_colours))
 
-  fill_manual <- scale_fill_manual(values = beis_colours(default = default_colours))
+  fill_manual <- scale_fill_manual(values = beis_colours(default = default_colours,
+                                                         distinct = distinct_colours))
 
   labs <- ggplot2::labs(x = NULL, y = NULL)
 

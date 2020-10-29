@@ -33,9 +33,9 @@
 #'  Teal = #006666
 #'  Medium dark blue = #3d4556
 #'
-#' Non-BEIS colours also included:
+#' Non-BEIS colours also used:
 #' Light blue = #c5e8ff -
-#' Root beer = #290e05
+#' Root beer = #4c1a09
 #' Pistachio green = #93c572
 #' Darker grey = #505050
 #' Red = #ec3337
@@ -57,6 +57,8 @@ beis_colours <- function(n = 15, distinct = FALSE, default = TRUE){
 
   assert_that(is.numeric(n))
   assert_that(is.logical(distinct))
+  assert_that(n <= 15, msg = "There are only a maximum of 15 colours available within the palettes")
+
 
   if (distinct == FALSE){
     if(default == TRUE) {
@@ -67,7 +69,7 @@ beis_colours <- function(n = 15, distinct = FALSE, default = TRUE){
     } else {
 
     colours <- c("#003366", "#0099cc", "#a8b8be", "#0047ab", "#689d9c", "#4a5d23", "#006666", "#3d4556",
-                 "#290e05", "#93c572", "#505050", "#ec3337", "#9a0e11", "#fbb034", "#000000")
+                 "#4c1a09", "#93c572", "#505050", "#ec3337", "#9a0e11", "#fbb034", "#000000")
   }} else {
 
     if (n > 6){
@@ -76,8 +78,8 @@ beis_colours <- function(n = 15, distinct = FALSE, default = TRUE){
 
     }
 
-    colours <- c("#003366", "#0099cc", "#c2baa9",
-                 "#5b842b", "#ee3d8f", "#505050")
+    colours <- c("#003366", "#0099cc", "#b3bfc5",
+                 "#99cc00", "#ee3d8f", "#ff9933")
 
   }
 

@@ -4,10 +4,14 @@
 \alias{theme_beis}
 \title{Style a ggplot with a BEIS theme.}
 \usage{
-theme_beis(...)
+theme_beis(default_colours = TRUE, distinct_colours = FALSE, ...)
 }
 \arguments{
+\item{default_colours}{whether to use the default colour scheme for BEIS or the alternative}
+
 \item{...}{Any additional arguments to pass to ggtheme}
+
+\item{distinc_colours}{Whether to use Dsitinct colours - maximum of 5}
 }
 \value{
 Returns a styled ggplot when used as the theme
