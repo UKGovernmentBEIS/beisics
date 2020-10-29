@@ -4,26 +4,43 @@
 #'
 #' @param n The number of colours to return, max is 15 for non-distinct, 5 for distinct.
 #' @param distinct Whether to return only colours which are more easily distinguishable or all colours
+#' @param deafult Choose whether to use the default BEIS colour scheme or the alternative (unofficial)
 #'
 #' @return Returns a character vector of the hex codes for BEIS colours
 #'
-#' BEIS colours:
+#' BEIS colours primary (as of October 2020):
 #' Dark blue = #003366
-#' Bright blue = #0099cc
-#' Grey = #a8b8be
-#' Magenta (pink) = #ee3d8f
-#' Green = #9ccd63
-#' Turquoise = #62c6c2
-#' Gold = #fbb034
-#' Platinum = #c2baa9
+#' Cyan = #0099cc
 #'
-#' Non-BEIS colours also included:
-#' Light blue = #c5e8ff
-#' Darker green = #5b842b
+#' BEIS colours secondary
+#' Secondary colours
+#'	Lime (#99cc00)
+#'	Green (#66cc33)
+#'	Gold (#ffcc33)
+#'	Orange (#ff9933)
+#'	Magenta (#ff3399)
+#'  Cerise (#cc0099)
+#'	Purple (#663399)
+#'	Lilac (#996699)
+#' 	Marine grey (#b3bfc5)
+#'	Dark slate (#555559)
+#'
+#' Alternate secondary colours
+#'  Grey = #a8b8be
+#'  cobalt blue = #0047ab
+#'  cyan = #689d9c
+#'  Dark moss green = #4a5d23
+#'  Teal = #006666
+#'  Medium dark blue = #3d4556
+#'
+#' Non-BEIS colours also used:
+#' Light blue = #c5e8ff -
+#' Root beer = #4c1a09
+#' Pistachio green = #93c572
 #' Darker grey = #505050
 #' Red = #ec3337
 #' Darker red = #9a0e11
-#' White = #FFFFFF
+#' White = #FFFFFF - Not Used
 #' Black = #000000
 #'
 #' The ONS recommend three helpful rules when choosing colours: (1) Get it right in black and white, (2) The safest hue is blue and (3) Red and green should never be seen (together). For more on choosing colour palettes, see ONS's introduction on 'Using colours', available on their website
@@ -31,19 +48,29 @@
 #'
 #' @export
 #'
+#' @importFrom assertthat assert_that
+#'
 #' @examples beis_colours(n = 3, distinct = TRUE)
 
 
-beis_colours <- function(n = 15, distinct = FALSE){
+beis_colours <- function(n = 15, distinct = FALSE, default = TRUE){
 
-  assertthat::assert_that(is.numeric(n))
-  assertthat::assert_that(is.logical(distinct))
+  assert_that(is.numeric(n))
+  assert_that(is.logical(distinct))
+  assert_that(n <= 15, msg = "There are only a maximum of 15 colours available within the palettes")
+
 
   if (distinct == FALSE){
+    if(default == TRUE) {
+      colours <- c("#003366", "#0099cc", "#99cc00", "#66cc33", "#ffcc33", "#ff9933", "#ff3399",
+                   "#cc0099", "#663399", "#996699", "#ec3337", "#9a0e11", "#555559", "#b3bfc5",
+                   "#000000")
 
-    colours <- c("#003366", "#0099cc", "#a8b8be", "#ee3d8f", "#9ccd63", "#62c6c2", "#fbb034", "#c2baa9",
-                 "#c5e8ff", "#5b842b", "#505050", "#ec3337", "#9a0e11", "#FFFFFF", "#000000")
-  } else {
+    } else {
+
+    colours <- c("#003366", "#0099cc", "#a8b8be", "#0047ab", "#689d9c", "#4a5d23", "#006666", "#3d4556",
+                 "#4c1a09", "#93c572", "#505050", "#ec3337", "#9a0e11", "#fbb034", "#000000")
+  }} else {
 
     if (n > 6){
 
@@ -51,8 +78,8 @@ beis_colours <- function(n = 15, distinct = FALSE){
 
     }
 
-    colours <- c("#003366", "#0099cc", "#c2baa9",
-                 "#5b842b", "#ee3d8f", "#505050")
+    colours <- c("#003366", "#0099cc", "#b3bfc5",
+                 "#99cc00", "#ee3d8f", "#ff9933")
 
   }
 

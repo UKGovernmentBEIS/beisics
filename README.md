@@ -49,7 +49,7 @@ The current functions in the package are:
  
 ## Ongoing expansions
 
-- Additional functionality for the ggplot function `theme_beis()` to include colour styling
+- Additional functionality for the ggplot function `theme_beis()` to include further colour styling
 - Additional functionality for `get_beisics()` to set defaults for ggplots, plotly and dygraph
 
 ## Ideal future functions
@@ -63,5 +63,6 @@ The current functions in the package are:
 ## Resources
 - https://engineering-shiny.org/css.html
 - https://slides.earo.me/rladies-pkg/#5
+- Analysis Style guide and Branding; 2019 CAGG presentation
 - Mango package building course
 - R package `Govdown`, created by GDS and installed in CBAS

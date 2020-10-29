@@ -2,22 +2,26 @@
 #'
 #' Uses the ggplot2::theme() function to create a BEIS style for ggplots.
 #'
+#' @param default_colours whether to use the default colour scheme for BEIS or the alternative
+#' @param distinc_colours Whether to use Dsitinct colours - maximum of 5
 #' @param ... Any additional arguments to pass to ggtheme
 #'
 #' @return Returns a styled ggplot when used as the theme
 #' @export
 #'
+#' @import ggplot2
+#'
 #' @examples ggplot2::ggplot(mtcars) +
-#' ggplot2::geom_point(ggplot2::aes(x = wt, y = mpg, colour = gear)) +
+#' ggplot2::geom_point(ggplot2::aes(x = wt, y = mpg, colour = as.factor(gear))) +
 #' theme_beis()
 
-theme_beis <- function(...){
+theme_beis <- function(default_colours = TRUE, distinct_colours = FALSE, ...){
 
   # to be updated to include
   # whether the plot is horizontal or vertical
   # so lines correspond
 
-  ggtheme <-  ggplot2::theme(
+  ggtheme <-  theme(
     #base_size = 11,
     #base_family = "",
     #base_line_size = base_size/22,
@@ -30,14 +34,21 @@ theme_beis <- function(...){
     axis.line.x.bottom = ggplot2::element_line(colour = "grey"),
     axis.line.y.left = ggplot2::element_line(colour = "white"),
     legend.position = "bottom",
-    legend.title = ggplot2::element_blank()
+    legend.title = ggplot2::element_blank(),
+    plot.title = element_text(hjust = 0, size = rel(1.5), face = "bold", colour = "#505050"),
+    plot.subtitle = element_text(hjust = 0)
   )
 
-  scale_lims_y <- ggplot2::scale_y_continuous(expand = c(0,0), limits = c(0,NA))
+
+  color_manual <- scale_color_manual(values = beis_colours(default = default_colours,
+                                                           distinct = distinct_colours))
+
+  fill_manual <- scale_fill_manual(values = beis_colours(default = default_colours,
+                                                         distinct = distinct_colours))
 
   labs <- ggplot2::labs(x = NULL, y = NULL)
 
-  return(list(ggtheme, labs, scale_lims_y))
+  return(list(ggtheme, labs, color_manual, fill_manual))
 
 }
 
