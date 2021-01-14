@@ -15,6 +15,7 @@ RoxygenNote: 7.0.0
 Imports: 
     assertthat,
     ggplot2,
-    dygraphs
+    dygraphs,
+    openxlsx
 Suggests: 
     testthat (>= 2.1.0)
