@@ -2,7 +2,7 @@
 % Please edit documentation in R/funs_excel_styling.R
 \name{add_beis_body_style}
 \alias{add_beis_body_style}
-\title{Function for styling the lain body of an excel table}
+\title{Function for styling the main body of an excel table}
 \usage{
 add_beis_body_style(
   wb,

@@ -38,6 +38,8 @@ The ideal state of this package is for it to be owned and evolved by BEIS analys
 
 The current functions in the package are:
 
+- `add_beis_body_style()` - adds a styled body content when saving an excel workbook with openxlsx package. This follows the CAGG guidance from 2019.
+- `add_beis_header_style()` - adds a styled header when saving an excel workbook with openxlsx package. This follows the CAGG guidance from 2019.
 - `beis_colours()` - returns BEIS-like colour palette as a vector of colours, with options 
 - `beis_logo()` - copies BEIS logo to directory and returns BEIS logo, with optional white typeface
 - `beis_css()` - copies BEIS-like css file to directory and returns BEIS css filepath

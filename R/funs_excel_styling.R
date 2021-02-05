@@ -65,7 +65,7 @@ add_beis_header_style <- function(wb, sheet = 1, rows = 1, cols = 1:3,
 }
 
 
-#' Function for styling the lain body of an excel table
+#' Function for styling the main body of an excel table
 #'
 #' Styled based on recommended defaults by CAGG Team. Will remove gridlines for sheet applied toby default
 #'
@@ -109,9 +109,18 @@ add_beis_body_style <- function(wb, sheet = 1, rows = 2:7, cols = 1:3,
 
 
   bodyStyle <- createStyle(borderStyle = "none", numFmt = "0,000.0",
-                           fontColour = beisics::beis_colours()[1], ...)
+                           fontColour = beis_colours()[1],
+                           ...)
 
+  #Add style to all the cells
   addStyle(wb, sheet = sheet, style = bodyStyle, rows = rows, cols =cols, gridExpand = TRUE)
+  #Add a broder just to the bottom cells
+  addStyle(wb, sheet = sheet,
+           style = createStyle(border = "Bottom",
+                               borderColour = beis_colours()[1],
+                               numFmt = "0,000.0",
+                               fontColour = beis_colours()[1],),
+           rows = max(rows), cols =cols, gridExpand = TRUE)
 
 }
 
