@@ -7,7 +7,7 @@
 add_beis_body_style(
   wb,
   sheet = 1,
-  rows = 2:7,
+  rows = 2:6,
   cols = 1:3,
   showGridLines = FALSE,
   ...
@@ -16,7 +16,7 @@ add_beis_body_style(
 \arguments{
 \item{wb}{the workbook to add the stylying too as generarated from}
 
-\item{sheet}{the sheet to apply the styling to}
+\item{sheet}{the sheet to apply the styling to, can be a number or a string}
 
 \item{rows}{the row to apply the syling to}
 

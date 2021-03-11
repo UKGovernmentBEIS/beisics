@@ -11,7 +11,7 @@ beis_colours(n = 15, distinct = FALSE, default = TRUE)
 
 \item{distinct}{Whether to return only colours which are more easily distinguishable or all colours}
 
-\item{deafult}{Choose whether to use the default BEIS colour scheme or the alternative (unofficial)}
+\item{default}{Choose whether to use the default BEIS colour scheme or the alternative (unofficial)}
 }
 \value{
 Returns a character vector of the hex codes for BEIS colours
@@ -23,11 +23,11 @@ Cyan = #0099cc
 BEIS colours secondary
 Secondary colours
 Lime (#99cc00)
-Green (#66cc33)
+ Cerise (#cc0099)
 Gold (#ffcc33)
 Orange (#ff9933)
 Magenta (#ff3399)
- Cerise (#cc0099)
+Green (#66cc33)
 Purple (#663399)
 Lilac (#996699)
 	Marine grey (#b3bfc5)

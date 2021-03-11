@@ -1,12 +1,17 @@
 Package: beisics
 Title: A package to apply BEIS styling to visualisations, apps and markdown
-Version: 0.0.1.1
+Version: 0.0.2.0
 Authors@R: 
-    person(given = "Amy",
+    c(person(given = "Amy",
            family = "Andrews",
            role = c("aut", "cre"),
            email = "datascience@beis.gov.uk",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           comment = c(ORCID = "YOUR-ORCID-ID")),
+      person(given = "Kerry",
+           family = "Cella",
+           role = c("ctb"),
+           email = "datascience@beis.gov.uk",
+           comment = c(ORCID = "YOUR-ORCID-ID")) )     
 Description: Package imports functions to help style visualisations with BEIS styling, including the BEIS logo.
 License: MIT + file LICENSE
 Encoding: UTF-8

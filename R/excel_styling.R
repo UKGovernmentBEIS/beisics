@@ -71,7 +71,7 @@ add_beis_header_style <- function(wb, sheet = 1, rows = 1, cols = 1:3,
 #'
 #'#' Uses the default beis blue "#003366"
 #' @param wb the workbook to add the stylying too as generarated from
-#' @param sheet the sheet to apply the styling to
+#' @param sheet the sheet to apply the styling to, can be a number or a string
 #' @param rows the row to apply the syling to
 #' @param cols the columns
 #' @param showGridLines Whether to show gridline in the worksheet. Default is FALSE.
@@ -101,8 +101,9 @@ add_beis_header_style <- function(wb, sheet = 1, rows = 1, cols = 1:3,
 #' ##NOT RUN
 #' #saveWorkbook(wb = wb, file =  "P:/wb_test.xlsx", overwrite = TRUE)
 
-add_beis_body_style <- function(wb, sheet = 1, rows = 2:7, cols = 1:3,
+add_beis_body_style <- function(wb, sheet = 1, rows = 2:6, cols = 1:3,
                                 showGridLines = FALSE, ...) {
+
 
 
   showGridLines(wb, sheet = sheet, showGridLines = showGridLines)
@@ -120,7 +121,7 @@ add_beis_body_style <- function(wb, sheet = 1, rows = 2:7, cols = 1:3,
                                borderColour = beis_colours()[1],
                                numFmt = "0,000.0",
                                fontColour = beis_colours()[1],),
-           rows = max(rows), cols =cols, gridExpand = TRUE)
+           rows = max(rows)+1, cols =cols, gridExpand = TRUE)
 
 }
 
