@@ -60,7 +60,6 @@ The current functions in the package are:
 - a function for BEIS-like leaflet theme
 - an example template/ markdown layout 
 - BEIS-like Shiny elements 
-- a function for styling excel workbooks/csvs saved from R
 
 ## Resources
 - https://engineering-shiny.org/css.html

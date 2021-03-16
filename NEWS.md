@@ -3,6 +3,8 @@
 
 * The beis_colours() function has now been updated to reorder the colours slightly, the Cerise (#cc0099) and Green (#66cc33) have swapped position to avoid confusion between the two greens (lime and green) when side by side. 
 
+* Some CSS styling has been added for floating TOCS when using R Markdown, so the indent is the same when a line overlaps and that the hover background colour is the same as the BEIS dark blue: #003366
+
 # beisics 0.0.1.1
 
 * Added a `NEWS.md` file to track changes to the package.
