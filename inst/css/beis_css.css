@@ -8,11 +8,11 @@
 
  BEIS colours secondary
 	Lime (#99cc00)
-	Green (#66cc33)
+	Cerise (#cc0099)
 	Gold (#ffcc33)
 	Orange (#ff9933)
 	Magenta (#ff3399)
-  Cerise (#cc0099)
+  Green (#66cc33)
 	Purple (#663399)
 	Lilac (#996699)
  	Marine grey (#b3bfc5)
@@ -122,3 +122,21 @@ h4 {
    font-size: 11px;
    font-family: sans-serif;
  }
+
+/* for updating the TOC colour and indent */
+.tocify-subheader .tocify-item {
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify-header {
+  text-indent: initial;
+}
+
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+	z-index: 2;
+	color: #fff;
+	background-color: #003366;
+	border-color: #337ab7;
+}
