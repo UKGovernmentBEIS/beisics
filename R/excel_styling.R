@@ -120,7 +120,8 @@ add_beis_body_style <- function(wb, sheet = 1, rows = 2:6, cols = 1:3,
            style = createStyle(border = "Bottom",
                                borderColour = beis_colours()[1],
                                numFmt = "0,000.0",
-                               fontColour = beis_colours()[1],),
+                               fontColour = beis_colours()[1],
+                               ...),
            rows = max(rows)+1, cols =cols, gridExpand = TRUE)
 
 }
