@@ -6,13 +6,13 @@
 #'
 #' Uses the default beis blue "#003366"
 #'
-#' @param wb the workbook to add the stylying too as generarated from
+#' @param wb the workbook to add the stylying to as generarated from the openxlsx package
 #' @param sheet the sheet to apply the styling to
 #' @param rows the row to apply the syling to
 #' @param cols the columns to apply the syling to
 #' @param header_classic whether to use a classic beis header with just the bottom border or
-#' a prnounced header with blue background and white text
-#' @param halign defaulted to right
+#' a pronounced header with blue background and white text
+#' @param halign rigght align by default
 #' @param ... additional parameters you might want to add from openxlsx::create_style()
 #'
 #' @return an updated workbook object
@@ -70,7 +70,7 @@ add_beis_header_style <- function(wb, sheet = 1, rows = 1, cols = 1:3,
 #' Styled based on recommended defaults by CAGG Team. Will remove gridlines for sheet applied by default
 #'
 #'#' Uses the default beis blue "#003366"
-#' @param wb the workbook to add the stylying too as generarated from
+#' @param wb the workbook to add the stylying to as generarated from the openxlsx package
 #' @param sheet the sheet to apply the styling to, can be a number or a string
 #' @param rows the row to apply the syling to
 #' @param cols the columns to apply the syling to
@@ -115,7 +115,7 @@ add_beis_body_style <- function(wb, sheet = 1, rows = 2:6, cols = 1:3,
 
   #Add style to all the cells
   addStyle(wb, sheet = sheet, style = bodyStyle, rows = rows, cols =cols, gridExpand = TRUE)
-  #Add a broder just to the bottom cells
+  #Add a border to just to the bottom cells
   addStyle(wb, sheet = sheet,
            style = createStyle(border = "Bottom",
                                borderColour = beis_colours()[1],
