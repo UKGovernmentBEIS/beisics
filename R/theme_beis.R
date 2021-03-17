@@ -3,7 +3,7 @@
 #' Uses the ggplot2::theme() function to create a BEIS style for ggplots.
 #'
 #' @param default_colours whether to use the default colour scheme for BEIS or the alternative
-#' @param distinc_colours Whether to use Dsitinct colours - maximum of 5
+#' @param distinct_colours Whether to use Dsitinct colours - maximum of 5
 #' @param ... Any additional arguments to pass to ggtheme
 #'
 #' @return Returns a styled ggplot when used as the theme

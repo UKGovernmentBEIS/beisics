@@ -4,7 +4,7 @@
 #'
 #' @param n The number of colours to return, max is 15 for non-distinct, 5 for distinct.
 #' @param distinct Whether to return only colours which are more easily distinguishable or all colours
-#' @param deafult Choose whether to use the default BEIS colour scheme or the alternative (unofficial)
+#' @param default Choose whether to use the default BEIS colour scheme or the alternative (unofficial)
 #'
 #' @return Returns a character vector of the hex codes for BEIS colours
 #'
@@ -15,11 +15,11 @@
 #' BEIS colours secondary
 #' Secondary colours
 #'	Lime (#99cc00)
-#'	Green (#66cc33)
+#'  Cerise (#cc0099)
 #'	Gold (#ffcc33)
 #'	Orange (#ff9933)
 #'	Magenta (#ff3399)
-#'  Cerise (#cc0099)
+#'	Green (#66cc33)
 #'	Purple (#663399)
 #'	Lilac (#996699)
 #' 	Marine grey (#b3bfc5)
@@ -62,8 +62,8 @@ beis_colours <- function(n = 15, distinct = FALSE, default = TRUE){
 
   if (distinct == FALSE){
     if(default == TRUE) {
-      colours <- c("#003366", "#0099cc", "#99cc00", "#66cc33", "#ffcc33", "#ff9933", "#ff3399",
-                   "#cc0099", "#663399", "#996699", "#ec3337", "#9a0e11", "#555559", "#b3bfc5",
+      colours <- c("#003366", "#0099cc", "#99cc00", "#cc0099", "#ffcc33", "#ff9933", "#ff3399",
+                   "#66cc33", "#663399", "#996699", "#ec3337", "#9a0e11", "#555559", "#b3bfc5",
                    "#000000")
 
     } else {
