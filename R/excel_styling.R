@@ -9,7 +9,7 @@
 #' @param wb the workbook to add the stylying too as generarated from
 #' @param sheet the sheet to apply the styling to
 #' @param rows the row to apply the syling to
-#' @param cols the columns
+#' @param cols the columns to apply the syling to
 #' @param header_classic whether to use a classic beis header with just the bottom border or
 #' a prnounced header with blue background and white text
 #' @param halign defaulted to right
@@ -67,13 +67,13 @@ add_beis_header_style <- function(wb, sheet = 1, rows = 1, cols = 1:3,
 
 #' Function for styling the main body of an excel table
 #'
-#' Styled based on recommended defaults by CAGG Team. Will remove gridlines for sheet applied toby default
+#' Styled based on recommended defaults by CAGG Team. Will remove gridlines for sheet applied by default
 #'
 #'#' Uses the default beis blue "#003366"
 #' @param wb the workbook to add the stylying too as generarated from
 #' @param sheet the sheet to apply the styling to, can be a number or a string
 #' @param rows the row to apply the syling to
-#' @param cols the columns
+#' @param cols the columns to apply the syling to
 #' @param showGridLines Whether to show gridline in the worksheet. Default is FALSE.
 #' @param ... additional parameters you might want to add from openxlsx::create_style()
 #'
