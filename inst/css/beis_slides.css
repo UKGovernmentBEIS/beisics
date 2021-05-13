@@ -1,0 +1,110 @@
+
+  /* Basic BEIS-style css */
+
+/* BEIS colours
+ BEIS colours primary (as of October 2020):
+  Dark blue = #003366
+  Cyan = #0099cc
+
+ BEIS colours secondary
+	Lime (#99cc00)
+	Green (#66cc33)
+	Gold (#ffcc33)
+	Orange (#ff9933)
+	Magenta (#ff3399)
+  Cerise (#cc0099)
+	Purple (#663399)
+	Lilac (#996699)
+ 	Marine grey (#b3bfc5)
+	Dark slate (#555559)
+
+ Alternate secondary colours (unofficial)
+  Grey = #a8b8be
+  cobalt blue = #0047ab
+  cyan = #689d9c
+  Dark moss green = #4a5d23
+  Teal = #006666
+  Medium dark blue = #3d4556
+
+ Non-BEIS colours also included:
+  Light blue = #c5e8ff -
+  Root beer = #4c1a09
+  Pistachio green = #93c572
+  Darker grey = #505050
+  Red = #ec3337
+  Darker red = #9a0e11
+  White = #FFFFFF - Not Used
+  Black = #000000
+*/
+
+
+body {
+  margin: 1% 2.5% 1% 2.5%;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  color: #FFFFFF;
+  background: #003366;
+  padding: 1.5% 3% 1.5% 3%;
+}
+
+h2 {
+  color: #003366;
+  border-bottom: 3px solid #003366;
+  padding: 1% 1% 0.5% 1%;
+}
+
+h3 {
+  color: #505050;
+  font-size: 22px;
+  border-bottom: 2px solid  #a8b8be;
+  padding: 1% 1% 0.5% 1%;
+}
+
+h4 {
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+p,  ul, ol {
+  color: #003366;
+}
+
+pre {
+  font-size: 0.6em;
+}
+
+.title-slide hgroup > h1 {
+  color: #FFFFFF;
+}
+
+
+#plot-container {
+	position: relative;
+}
+
+
+
+
+ /* add in elements for a table, borders, bullet lists,
+ numbered lists, table captions, table positions, plot positions,
+ plot captions, inline code, code blocks, section list elements, block quotes, lines for line break,
+ header with beis logo in it, footer with beis logo in it*/
+
+ /* Elements for dygraph */
+
+ .dygraph-title {
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  align-content: flex-start;
+  font-family: sans-serif;
+ }
+
+ .dygraph-axis-label {
+   font-size: 11px;
+   font-family: sans-serif;
+ }
