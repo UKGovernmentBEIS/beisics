@@ -186,3 +186,37 @@ add_beis_body_style(wb, rows = 2:nrow(trade)) # note the start of body
 openxlsx::saveWorkbook(wb = wb, file =  "P:/wb_test.xlsx", overwrite = TRUE)
 ```
 <div align="right"> ![](W:/TRAINSHARE/Coffee and Coding/beisics/excel_head_body_classic.PNG){height=190px} </div>
+
+## Feature 5
+
+<br>
+<br>
+<br>
+<br>
+<center> <font size=12> theme_beis_dygraph </font></centre>
+
+## Feature 5: Theme BEIS dygraph
+<font size=5> The final function is the theme_beis_dygraph function for styling your dygraph plots. </font>
+
+```{r, fig.height= 3}
+d <- dygraphs::dygraph(cbind(mdeaths, fdeaths), main = "title")
+d <- beisics::theme_beis_dygraph(d, copy_to = "inst/css")
+d
+```
+
+## Further information
+
+As noted the package is available to R CBAS users currently, just execute beisics::beis_colours() to check.
+
+The package can also be downloaded and installed outside of CBAS from the Gitlab repository.
+
+For further information please check the Gitlab repo:
+
+**http://cbas-pdcm-01/all_data_science/packages/beisics**
+
+
+## Questions
+
+For any further questions please email the Advanced Analytics Team
+
+AdvancedAnalytics@beis.gov.uk
