@@ -18,5 +18,6 @@ get_beis_css <- function(copy_to = getwd()){
 
     file.copy(system.file("css/beis_css.css", package = "beisics"), copy_to)
 
+    file.copy(system.file("css/beis_slides.css", package = "beisics"), copy_to)
 
 }
