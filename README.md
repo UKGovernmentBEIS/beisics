@@ -42,7 +42,7 @@ The current functions in the package are:
 - `add_beis_header_style()` - adds a styled header when saving an excel workbook with openxlsx package. This follows the CAGG guidance from 2019.
 - `beis_colours()` - returns BEIS-like colour palette as a vector of colours, with options 
 - `beis_logo()` - copies BEIS logo to directory and returns BEIS logo, with optional white typeface
-- `beis_css()` - copies BEIS-like css file to directory and returns BEIS css filepath
+- `beis_css()` - copies BEIS-like css file for Rmarkdown and for Slides to directory and returns BEIS css filepath
 - `theme_beis()` - styles ggplots with BEIS-like styling
 - `get_beis_css()` - copies BEIS-like css file to directory
 - `get_beis_logo()` - copies BEIS logo to directory, with optional white typeface

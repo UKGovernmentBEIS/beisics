@@ -1,3 +1,9 @@
+# beisics 0.0.2.1
+* Added css for creating ios html slides using the beisics colour scheme and template. This is now called by the get_beisics() function or get_beis_css().
+
+
+
+
 # beisics 0.0.2.0
 * Excel styling now available when saving a workbook using the openxlsx package. Use add_beis_header_style() to style the column headers and add_beis_body_style() to style the body.
 

@@ -12,8 +12,6 @@ theme_beis_dygraph(dygraph, copy_to = getwd(), default_colours = TRUE)
 \item{copy_to}{The working directory to copy the logo to, default current working directory}
 
 \item{default_colours}{whether to use the default colour scheme or}
-
-\item{...}{Any additional arguments to pass to dygraph or beis_css or beis_colours()}
 }
 \value{
 Returns a styled dygraph when piped to
