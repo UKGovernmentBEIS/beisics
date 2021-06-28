@@ -1,4 +1,2 @@
-^beisics\.Rproj$
+^.*\.Rproj$
 ^\.Rproj\.user$
-^LICENSE\.md$
-^logos

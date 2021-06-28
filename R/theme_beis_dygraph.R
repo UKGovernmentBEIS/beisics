@@ -9,7 +9,7 @@
 #' @return Returns a styled dygraph when piped to
 #' @export
 #' @examples d <- dygraphs::dygraph(cbind(mdeaths, fdeaths), main = "title")
-#' p <- theme_beis_dygraph(d, copy_to = "P:/")
+#' p <- theme_beis_dygraph(d, copy_to = "C:/")
 #'
 #' @seealso beis_css, beis_colours
 

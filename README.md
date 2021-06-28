@@ -1,6 +1,6 @@
 # Package `beisics`
 
-This package is intended to allow consistent 'BEIS-like' styling in R dashboards, visualisations and markdown documents. This package was designed to create each function as a minimum viable product, which can be added to and updated continously. 
+This package is intended to allow consistent 'BEIS-like' styling in R dashboards, visualisations and markdown documents. This package was designed to create each function as a minimum viable product, which can be added to and updated continuously. 
 
 ## Background 
 
@@ -10,29 +10,17 @@ Having a consistent styling framework available to all analysts in BEIS will mak
 
 ## Downloading and using
 
-Similar to other packages which have been written for R within CBAS, this package can be downloaded, installed and tested from the internal instance of the CBAS gitlab, under `all_data_science/beisics`
+To download and install the package from the github repository:
 
-To download and install the package from the gitlab repository:
-
-- Click on the beisics…tar.gz in the respository
-- Download into a folder accessible from R
-- In RStudio click on Tools -> Install Packages…
-- Install from Package Archive file
-- browse to the location of the beisics…tar.gz
-- Then click Install
-
-A potential alternative in the future will be to install the package using the `devtools`, `git2r` and `getPass` packages with the following code:
 ```
-devtools::install_git(
-    "http://cbas-pdcm-01/all_data_science/beisics",
-    credentials = git2r::cred_user_pass("your_username", getPass::getPass())
+devtools::install_github(
+    "UKGovernmentBEIS/beisics"
 )
 ```
-Entering your CBAS password when prompted.
- 
+
 ## Adding to the package
 
-The ideal state of this package is for it to be owned and evolved by BEIS analysts within the department. If there is a function which could be added or improved in the package, please do contribute to the package by first cloning and branching from the master GitLab repo, building or refactoring code, re-building the package to get the gz file, add this back into the repo, and setting up a merge request through GitLab. Ideally someone else will be available to check through the merge request before adding it to the master version. 
+The ideal state of this package is for it to be owned and evolved by BEIS analysts within the department. If there is a function which could be added or improved in the package, please do contribute to the package by first cloning and branching from the internal master GitLab repo, building or refactoring code, re-building the package to get the gz file, add this back into the repo, and setting up a merge request through GitLab. Ideally someone else will be available to check through the merge request before adding it to the master version. 
 
 ## Existing functions
 
@@ -58,12 +46,11 @@ The current functions in the package are:
  
 - a function for BEIS-like plotly theme
 - a function for BEIS-like leaflet theme
-- an example template/ markdown layout 
 - BEIS-like Shiny elements 
 
 ## Resources
 - https://engineering-shiny.org/css.html
 - https://slides.earo.me/rladies-pkg/#5
-- Analysis Style guide and Branding; 2019 CAGG presentation
-- Mango package building course
-- R package `Govdown`, created by GDS and installed in CBAS
+- Analysis Style guide and Branding; 2019 CAGG presentation in BEIS
+- Mango package building course run at EARL 2019
+- R package `Govdown`, created by GDS

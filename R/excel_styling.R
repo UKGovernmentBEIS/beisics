@@ -4,15 +4,15 @@
 #' There are two header styles available. One with a bottom border and blue text and another
 #' with a filled blue background and bold white text.
 #'
-#' Uses the default beis blue "#003366"
+#' Uses the default BEIS blue "#003366"
 #'
-#' @param wb the workbook to add the stylying to as generarated from the openxlsx package
+#' @param wb the workbook to add the styling to as generated from the openxlsx package
 #' @param sheet the sheet to apply the styling to
-#' @param rows the row to apply the syling to
-#' @param cols the columns to apply the syling to
-#' @param header_classic whether to use a classic beis header with just the bottom border or
+#' @param rows the row to apply the styling to
+#' @param cols the columns to apply the styling to
+#' @param header_classic whether to use a classic BEIS header with just the bottom border or
 #' a pronounced header with blue background and white text
-#' @param halign rigght align by default
+#' @param halign right align by default
 #' @param ... additional parameters you might want to add from openxlsx::create_style()
 #'
 #' @return an updated workbook object
@@ -38,7 +38,7 @@
 #' add_beis_body_style(wb, textDecoration = "italic")
 #'
 #' ##NOT RUN
-#' #saveWorkbook(wb = wb, file =  "P:/wb_test.xlsx", overwrite = TRUE)
+#' #saveWorkbook(wb = wb, file =  paste0(getwd(),"wb.xlsx"), overwrite = TRUE)
 
 add_beis_header_style <- function(wb, sheet = 1, rows = 1, cols = 1:3,
                                   header_classic = TRUE, halign = "right", ...) {
@@ -69,11 +69,11 @@ add_beis_header_style <- function(wb, sheet = 1, rows = 1, cols = 1:3,
 #'
 #' Styled based on recommended defaults by CAGG Team. Will remove gridlines for sheet applied by default
 #'
-#'#' Uses the default beis blue "#003366"
-#' @param wb the workbook to add the stylying to as generarated from the openxlsx package
+#'#' Uses the default BEIS blue "#003366"
+#' @param wb the workbook to add the styling to as generated from the openxlsx package
 #' @param sheet the sheet to apply the styling to, can be a number or a string
-#' @param rows the row to apply the syling to
-#' @param cols the columns to apply the syling to
+#' @param rows the row to apply the styling to
+#' @param cols the columns to apply the styling to
 #' @param showGridLines Whether to show gridline in the worksheet. Default is FALSE.
 #' @param ... additional parameters you might want to add from openxlsx::create_style()
 #'
@@ -99,7 +99,7 @@ add_beis_header_style <- function(wb, sheet = 1, rows = 1, cols = 1:3,
 #' add_beis_body_style(wb, textDecoration = "italic")
 #'
 #' ##NOT RUN
-#' #saveWorkbook(wb = wb, file =  "P:/wb_test.xlsx", overwrite = TRUE)
+#' #saveWorkbook(wb = wb, file =  paste0(getwd(),"wb.xlsx"), overwrite = TRUE)
 
 add_beis_body_style <- function(wb, sheet = 1, rows = 2:6, cols = 1:3,
                                 showGridLines = FALSE, ...) {

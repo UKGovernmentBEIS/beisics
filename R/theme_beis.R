@@ -3,7 +3,7 @@
 #' Uses the ggplot2::theme() function to create a BEIS style for ggplots.
 #'
 #' @param default_colours whether to use the default colour scheme for BEIS or the alternative
-#' @param distinct_colours Whether to use Dsitinct colours - maximum of 5
+#' @param distinct_colours Whether to use Distinct colours - maximum of 5
 #' @param ... Any additional arguments to pass to ggtheme
 #'
 #' @return Returns a styled ggplot when used as the theme
@@ -22,10 +22,6 @@ theme_beis <- function(default_colours = TRUE, distinct_colours = FALSE, ...){
   # so lines correspond
 
   ggtheme <-  theme(
-    #base_size = 11,
-    #base_family = "",
-    #base_line_size = base_size/22,
-    #base_rect_size = base_size/22,
     text = ggplot2::element_text(size = 12),
     axis.title = ggplot2::element_text(face = "bold"),
     axis.title.y = ggplot2::element_text(margin = ggplot2::margin(0, 30, 0, 0,"pt")),
