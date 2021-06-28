@@ -3,7 +3,6 @@
 #' Uses the dygraphs package and calls beis_css() and beis_colours() to style
 #'
 #' @param dygraph The dygraph object
-#' @param ... Any additional arguments to pass to dygraph or beis_css or beis_colours()
 #' @param copy_to The working directory to copy the logo to, default current working directory
 #' @param default_colours whether to use the default colour scheme or
 #'
